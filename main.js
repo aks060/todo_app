@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-import {conn, session, bcrypt} from './include/include';
-
+const session=require('express-session');
+const path = require('path');
+const bcrypt=require("bcryptjs");
+const conn=require("./include/include").conn;
 
 app.use(bodyParser.raw());
 app.use(bodyParser.json());

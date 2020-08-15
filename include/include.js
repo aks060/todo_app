@@ -1,4 +1,4 @@
-const config_file=require("..config/");
+const config_file=require("../config");
 const session=require('express-session');
 const path = require('path');
 const bcrypt=require("bcryptjs");
@@ -20,7 +20,5 @@ conn.connect(function(err){
 });
 
 module.exports={
-    conn: conn,
-    session: session,
-    bcrypt: bcrypt,
+    conn: conn
 }
